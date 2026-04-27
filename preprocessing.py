@@ -27,7 +27,7 @@ df = df.fillna(df.mean(numeric_only=True))
 
 # Encode categorical columns
 le = LabelEncoder()
-for col in df.select _dtypes(include='object').columns:
+for col in df.select_dtypes(include='object').columns:
     df[col] = le.fit_transform(df[col])
 
 print("\nDATA AFTER PREPROCESSING:\n", df.head())
